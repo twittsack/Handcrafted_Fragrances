@@ -43,6 +43,13 @@ body {
     align-items: center;
 }
 
+.header-bar {
+    min-width: 100vw; 
+    background-color: #F4EFE6;
+    color: #af8d54;
+    font-weight: bolder;
+}
+
 .main-container-with-margin {
   margin: 0 auto;
   width: 80%;

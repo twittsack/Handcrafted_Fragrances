@@ -1,0 +1,140 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    min-width: 300px;
+    background-color: #FAF9F6;
+    /* Constraint for your project */
+}
+
+/* Header area */
+.page-header {
+    height: 56px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu-item {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.social .icon {
+    height: 1rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+/* Main area > header banner */
+.main-banner {
+    height: 425px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25),
+            rgba(255, 255, 255, 0.25)),
+        url(../assets/YSA-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container-with-margin {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1440px; /*hint: reconsider this with 4k screens */
+}
+
+.column-p {
+  margin: 0.5rem 0; 
+}
+
+/* Main Text */
+.logo {
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.you-smell-amazing-style {
+  text-decoration: none; /* This removes the default link underline */
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #85611A;                  /* Uses the golden mid-tone identified earlier */
+  transform: rotate(-12deg) skewX(-30deg);        /* Slants the individual letters forward */
+  line-height: 0.9;                /* Keeps the stacked lines tight together */
+}
+
+.subheading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: #af8d54; /* Warm golden ocher */
+}
+
+.subheading-dark {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: #343A40; /* Classic charcoal */
+}
+
+.subheading-dark-sm {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 1px
+}
+
+.accent-text {
+  font-family: 'Monsieur La Doulaise', cursive;
+  font-size: 50px;
+  font-weight: bolder;
+  font-style: normal;
+  color: #af8d54; /* Warm golden ochre */
+  margin-top: -15px; /* Subtle negative margin to create the overlap */
+}
+
+/* custom stylings */
+.navbar-custom {
+  background-color: #FAF9F6;
+}
+
+.col-divider {
+    position: relative;
+}
+
+/* Creates the shortened vertical line */
+.col-divider::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 15px;      /* Gap from the top */
+    bottom: 15px;   /* Gap from the bottom */
+    width: 1px;     /* Line thickness */
+    background-color: rgba(0, 0, 0, 0.15); /* Soft, subtle dark line */
+}
+
+.btn-custom-fill {
+    background-color: #85611A;
+    border-color: #85611A;
+    color: #ffffff; /* White text for contrast */
+    transition: background-color 0.2s ease;
+}
+
+/* Optional: Slight shade shift when hovering over the button */
+.btn-custom-fill:hover {
+    background-color: #6b4d14; /* Slightly darker shade for hover depth */
+    border-color: #6b4d14;
+    color: #ffffff;
+}

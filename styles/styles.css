@@ -50,10 +50,50 @@ body {
     font-weight: bolder;
 }
 
+.main-banner-craft {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25),
+            rgba(255, 255, 255, 0.25)),
+        url(../assets/scent-creation.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    opacity: 95%;
+}
+
+.main-banner-reviews {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.25),
+            rgba(255, 255, 255, 0.25)),
+        url(../assets/FindFragrance.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    opacity: 95%;
+}
+
 .main-container-with-margin {
   margin: 0 auto;
   width: 80%;
   max-width: 1440px; /*hint: reconsider this with 4k screens */
+}
+
+.shield {
+    min-width: 290px;
+    margin: 10px 120px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.images-section {
+  background-color: #999999; /* Accepts Hex codes, RGB, or color names */
+  padding: 60px 20px;        /* Adds breathing room inside the section */
+  color: #333333;            /* Sets text color so it remains highly readable */
 }
 
 .column-p {
@@ -74,6 +114,18 @@ body {
   color: #85611A;                  /* Uses the golden mid-tone identified earlier */
   transform: rotate(-12deg) skewX(-30deg);        /* Slants the individual letters forward */
   line-height: 0.9;                /* Keeps the stacked lines tight together */
+}
+
+.main-banner-title {
+    font-family: 'Robato', serif;
+    color: #111111; /* Dark charcoal/black */
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: calc(2rem + 2vw);
+    line-height: 1.1;
+    letter-spacing: 4px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .subheading {
@@ -144,4 +196,26 @@ body {
     background-color: #6b4d14; /* Slightly darker shade for hover depth */
     border-color: #6b4d14;
     color: #ffffff;
+}
+
+/* carousel customizations */
+.carousel-caption-stacked {
+  position: static;       /* Removes absolute floating; item stacks naturally below img */
+  padding: 30px 60px;     /* Leaves horizontal room so arrow icons don't hit the text */
+  text-align: center;
+  background-color: #9B7E4B; /* Solid surface color container for your typography */
+  color: #212529;         /* Dark font color for high contrast against white backgrounds */
+}
+
+.slide-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.slide-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 750px;
+  margin: 0 auto 15px auto;
 }

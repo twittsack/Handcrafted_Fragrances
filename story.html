@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Story - You Smell Amazing</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,8 @@
         rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
         crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    >
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <header class="page-header">
@@ -52,17 +52,88 @@
         </nav>
     </header>
     <main>
-        <section class="row align-items-center">
+        <div class="row align-items-center">
             <p class="colummn-p header-bar mt-4 mb-0 ps-5">Our Story - How it Started</p>
-        </section>
-        <section class="main-banner-craft">
+        </div>
+        <div class="main-banner-craft">
             <div class="shield mt-4" style="width:75%">
                 <p class="column-p fw-bold mt-4">What began as a quiet weekend hobby quickly transformed into a definitive passion when we noticed a frustrating flaw in the commercial fragrance industry.  After investing in expensive, mainstream perfumes, we found their synthetic scents completely vanished into thin air after just a few short hours.  In contrast, the natural, hand-blended compositions we were experimenting with at home were still tracking strong and complex at the four-hour mark.  This striking realization sparked an obsession to improve our custom blends, proving that personal luxury shouldn't have a fleeting expiration date.</p>
                 <p class="column-p fw-bold mt-4">Driven by this discovery, we set out to intentionally master the architecture of long-lasting perfumery.  We focus heavily on structural integrity.  Sourcing dense, high-grade base notes like rich golden amber and structural woods that anchor tightly to the skin.  Because we believe a beautiful scent profile should stay with you from your morning routine well into the evening, we meticulously cure each small batch and strive to craft our scents to stay active for as long as possible.</p>
                 <p class="column-p fw-bold mt-4">At You Smell Amazing, scent is more than just a passing sensory experience; it is an intimate time capsule capable of triggering vivid memories and deep emotions. Our philosophy is rooted in the belief that the finest fragrances are those that tell a story close to your heart, whether it is the comforting crackle of an open fire on a winter evening, the crisp salt air of a forgotten coastline, or the grounding peace of a sunlit forest trail. We don't just blend ingredients; we capture fleeting moments and transform them into beautifully balanced, wearable liquid narratives that stay with you throughout the day.</p>
             </div>
-        </section>
-        <hr class="opacity-50" />
+        </div>
+        <hr class="opacity-50">
+        <!-- Modal -->
+        <div 
+            class="modal fade" 
+            id="formModal" 
+            data-bs-backdrop="static" 
+            data-bs-keyboard="false" 
+            tabindex="-1"  
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="formModalLabel">Feedback</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="https://formspree.io/f/xaenwjvr" method="POST" class="contact-form">
+                        <div class="mb3 form-floating">
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                id="contact-name" 
+                                placeholder="Name"
+                                name="contact-name"
+                                required
+                            >
+                            <label for="contact-name">Name</label>
+                        </div>
+                        <div class="mb3 form-floating">
+                            <input 
+                                type="email" 
+                                class="form-control" 
+                                id="contact-email" 
+                                placeholder="name@example.com"
+                                name="contact-email"
+                                required
+                            >
+                            <label for="contact-email">Email</label>
+                        </div>
+                        <div class="mb3 form-floating">
+                            <textarea 
+                                class="form-control" 
+                                id="message" 
+                                placeholder="Message"
+                                name="message"  
+                                rows="3" 
+                                required
+                            ></textarea>
+                            <label for="message" class="form-label">Message</label>
+                        </div>
+                        <div class="form-check">
+                            <input 
+                                class="form-check-input" 
+                                type="checkbox" 
+                                value="" 
+                                id="data-protection-field" 
+                                name="accept-toc" 
+                                required
+                            >
+                            <label class="form-check-label" for="data-protection-field">
+                                I accept the data protection guidelines.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <button type="submit" class="btn btn-primary">Submit message</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </form>  
+                </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="container-fluid">
         <div class="row text-center align-items-center m-0">
@@ -75,8 +146,9 @@
             <div class="col col-12 col-md-2 order-4 order-sm-3">
             <ul class="social">
                 <li>
-                    <a href="#">
-                        <img class="icon" src="./assets/pencil-square.svg" alt="Write a Review" />
+                     <!-- Button trigger modal-->
+                    <a class="fixed-link-circle left" data-bs-toggle="modal" data-bs-target="#formModal">
+                    <img class="icon" src="./assets/pencil-square.svg" alt="Write a Review">
                     </a>
                 </li>
             </ul>

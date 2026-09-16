@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Fragrances - You Smell Amazing</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,8 @@
         rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
         crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    >
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <header class="page-header">
@@ -53,10 +53,10 @@
     </header>
     <!-- Main Catalog Container -->
     <main>
-        <section class="row">
+        <div class="row">
             <p class="colummn-p header-bar mt-4 mb-0 ps-5">The Collection</p>
-        </section>
-        <section class="row">
+        </div>
+        <div class="row">
         <!-- Carousel -->
         <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" style="background-color: #9B7E4B;">
   
@@ -74,7 +74,7 @@
             
             <!-- Slide 1 -->
             <div class="carousel-item active justify-content-center">
-            <img src="./assets/Frag_1_ICON.png" alt="ICON Fragrance" class="d-block mt-4 mx-auto"style="max-height: 110px;">
+            <img src="./assets/Frag_1_ICON.png" alt="ICON Fragrance" class="d-block mt-4 mx-auto" style="max-height: 110px;">
             <div class="carousel-caption-stacked text-center">
                 <h5 class="slide-title">ICON</h5>
                 <p class="slide-description">Bright citrus balancing with warm deep amber and a clean cedarwood finish.</p>
@@ -134,19 +134,80 @@
             <span class="visually-hidden">Next</span>
         </button>
         </div>
-
-
-
-        <!-- Vertical Stack of 5 Compact Products -->
-        <div class="row d-flex flex-column gap-3">
-
-            
-
-            
+        <!-- Modal -->
+        <div 
+            class="modal fade" 
+            id="formModal" 
+            data-bs-backdrop="static" 
+            data-bs-keyboard="false" 
+            tabindex="-1"  
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="formModalLabel">Feedback</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="https://formspree.io/f/xaenwjvr" method="POST" class="contact-form">
+                        <div class="mb3 form-floating">
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                id="contact-name" 
+                                placeholder="Name"
+                                name="contact-name"
+                                required
+                            >
+                            <label for="contact-name">Name</label>
+                        </div>
+                        <div class="mb3 form-floating">
+                            <input 
+                                type="email" 
+                                class="form-control" 
+                                id="contact-email" 
+                                placeholder="name@example.com"
+                                name="contact-email"
+                                required
+                            >
+                            <label for="contact-email">Email</label>
+                        </div>
+                        <div class="mb3 form-floating">
+                            <textarea 
+                                class="form-control" 
+                                id="message" 
+                                placeholder="Message"
+                                name="message"  
+                                rows="3" 
+                                required
+                            ></textarea>
+                            <label for="message" class="form-label">Message</label>
+                        </div>
+                        <div class="form-check">
+                            <input 
+                                class="form-check-input" 
+                                type="checkbox" 
+                                value="" 
+                                id="data-protection-field" 
+                                name="accept-toc" 
+                                required
+                            >
+                            <label class="form-check-label" for="data-protection-field">
+                                I accept the data protection guidelines.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <button type="submit" class="btn btn-primary">Submit message</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </form>  
+                </div>
+                </div>
+            </div>
         </div>
-        </section>
+        </div>
+        <hr class="opacity-50">
     </main>
-
     <footer class="container-fluid">
         <div class="row text-center align-items-center m-0">
             <div class="col col-12 col-md-2 order-1 order-sm-1 text-start">
@@ -158,8 +219,9 @@
             <div class="col col-12 col-md-2 order-4 order-sm-3">
             <ul class="social">
                 <li>
-                    <a href="#">
-                        <img class="icon" src="./assets/pencil-square.svg" alt="Write a Review" />
+                     <!-- Button trigger modal-->
+                    <a class="fixed-link-circle left" data-bs-toggle="modal" data-bs-target="#formModal">
+                    <img class="icon" src="./assets/pencil-square.svg" alt="Write a Review">
                     </a>
                 </li>
             </ul>
